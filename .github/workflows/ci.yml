@@ -39,6 +39,12 @@ jobs:
       - name: Install dependencies
         run: mvn install -DskipTests
 
-      # Шаг 5: Запускаем тесты
+      # Шаг 5: Устанавливаем Chrome для тестов
+      - name: Install Chrome browser
+        run: sudo apt-get install -y google-chrome-stable
+
+      # Шаг 6: Запускаем тесты
       - name: Run tests
+        env:
+          CI: true  # Устанавливаем переменную окружения для активации headless режима
         run: mvn test
