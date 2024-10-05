@@ -22,7 +22,6 @@ public class driver {
         // Необходимо для совместимости с последними версиями Chrome
         options.addArguments("--remote-allow-origins=*");
 
-        // Проверяем, если тесты запускаются в CI среде (например, GitHub Actions)
         String headlessEnv = System.getenv("CI");
         if (headlessEnv != null && headlessEnv.equals("true")) {
             options.addArguments("--headless");  // Headless режим

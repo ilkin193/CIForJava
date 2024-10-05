@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.qameta.allure.Step;
+
 public class MyStepdefs {
     public static WebDriver driver;
     private MyElements pom;
@@ -18,15 +20,20 @@ public class MyStepdefs {
         driver = Utils.driver.getDriver();
         this.pom = new MyElements(driver);
     }
+
+    @Step("Navigating to home page")
     @Given("Navigate to home page")
     public void goToHomePage() {
         driver.navigate().to("https://oxu.az/");
     }
+
+    @Step("Changing language to Russian")
     @When("Change language to russian")
     public void russianLanguageBtn(){
         pom.russianLanguageBtn();
     }
 
+    @Step("Navigating to page about conflict")
     @Then("Go to page about conflict")
     public void conflictPostOnNavbar() {
         pom.conflictPostOnNavbar();
