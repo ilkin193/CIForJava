@@ -38,4 +38,9 @@ public class MyStepdefs {
     public void conflictPostOnNavbar() {
         pom.conflictPostOnNavbar();
     }
+
+    @Given("Navigate to home page")
+    public void navigateToHomePage(){
+
+    }
 }

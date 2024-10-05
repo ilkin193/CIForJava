@@ -9,7 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+<<<<<<< HEAD
         <!-- Cucumber dependencies -->
+=======
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -22,14 +25,18 @@
             <version>7.8.1</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
 
         <!-- Selenium dependencies -->
+=======
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.5.3</version>
         </dependency>
         <dependency>
+<<<<<<< HEAD
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
             <version>4.5.3</version>
@@ -37,28 +44,56 @@
 
         <!-- Lombok dependency -->
         <dependency>
+=======
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
+<<<<<<< HEAD
 
         <!-- JUnit dependency -->
+=======
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.6</version>
+            <type>pom</type>
+        </dependency>
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
 
         <!-- Log4j dependency -->
+=======
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+<<<<<<< HEAD
 
         <!-- WebDriverManager dependency -->
+=======
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -108,6 +143,21 @@
                     </execution>
                 </executions>
             </plugin>
+<<<<<<< HEAD
+=======
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <systemPropertyVariables>
+                        <allure.results.directory>target/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
         </plugins>
     </build>
 
@@ -116,4 +166,8 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> 24acc959bebe5d973a20de3e707bf57305d3f6b1
