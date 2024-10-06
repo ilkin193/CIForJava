@@ -54,8 +54,8 @@ jobs:
       - name: Generate Allure report
         run: mvn allure:report
 
-      #Логи
-      - name: Display logs
-        run: |
-          cat target/surefire-reports/*.txt
-          cat target/allure-results/*
+#      #Логи
+#      - name: Display logs
+#        run: |
+#          cat target/surefire-reports/*.txt
+#          cat target/allure-results/*
