@@ -55,7 +55,7 @@ jobs:
         run: mvn allure:report
 
       - name: Archiving allure testOps results
-        run: zip -r allure-results.zip target/allure-results
+        run: zip -r target/allure-results.zip target/allure-results
 
 
       - name: List folders
