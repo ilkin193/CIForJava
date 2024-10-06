@@ -54,8 +54,13 @@ jobs:
       - name: Generate Allure report
         run: mvn allure:report
 
-#      #Логи
-#      - name: Display logs
-#        run: |
-#          cat target/surefire-reports/*.txt
-#          cat target/allure-results/*
+      # Шаг 8: Загрузка результатов в Allure TestOps
+      - name: Upload results to Allure TestOps
+        env:
+          ALLURE_ENDPOINT: https://allure.testops.cloud
+          ALLURE_PROJECT_ID: ${{ secrets.ALLURE_PROJECT_ID }}
+          ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
+        run: |
+          curl -X POST "$ALLURE_ENDPOINT/api/rs/testops/project/$ALLURE_PROJECT_ID/import/allure" \
+          -H "Authorization: Api-Token $ALLURE_TOKEN" \
+          -F "file=@target/allure-results.zip"
