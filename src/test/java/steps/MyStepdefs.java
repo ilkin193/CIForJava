@@ -3,12 +3,8 @@ package steps;
 import elements.MyElements;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.qameta.allure.Step;
 
@@ -21,26 +17,21 @@ public class MyStepdefs {
         this.pom = new MyElements(driver);
     }
 
-    @Step("Navigating to home page")
+
     @Given("Navigate to home page")
-    public void goToHomePage() {
+    public void navigate_to_home_page() {
         driver.navigate().to("https://oxu.az/");
     }
 
-    @Step("Changing language to Russian")
+
     @When("Change language to russian")
-    public void russianLanguageBtn(){
+    public void change_language_to_russian() {
         pom.russianLanguageBtn();
     }
 
-    @Step("Navigating to page about conflict")
+
     @Then("Go to page about conflict")
-    public void conflictPostOnNavbar() {
+    public void go_to_page_about_conflict() {
         pom.conflictPostOnNavbar();
-    }
-
-    @Given("Navigate to home page")
-    public void navigateToHomePage(){
-
     }
 }
