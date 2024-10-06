@@ -6,8 +6,6 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
-import io.qameta.allure.Step;
-
 public class MyStepdefs {
     public static WebDriver driver;
     private MyElements pom;
